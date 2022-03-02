@@ -2,13 +2,11 @@ package com.example.kursakademiaandroida.features.data.network.model
 
 
 import com.example.kursakademiaandroida.features.characters.domain.model.Character
-import com.example.kursakademiaandroida.features.characters.domain.model.CharacterLocation
-import com.example.kursakademiaandroida.features.characters.domain.model.CharacterOrigin
 import com.google.gson.annotations.SerializedName
 
 data class CharacterRemote(
     @SerializedName("created") val created: String,
-    @SerializedName("episode") val episode: List<Any>,
+    @SerializedName("episode") val episode: List<String>,
     @SerializedName("gender") val gender: String,
     @SerializedName("id") val id: Int,
     @SerializedName("image") val image: String,
@@ -20,6 +18,7 @@ data class CharacterRemote(
     @SerializedName("type") val type: String,
     @SerializedName("url") val url: String
 ) {
+
     fun toCharacter() = Character(
         id = id,
         name = name,
@@ -33,24 +32,25 @@ data class CharacterRemote(
         episode = episode,
         url = url
     )
+
+    data class CharacterOriginRemote(
+        @SerializedName("name") val name: String,
+        @SerializedName("url") val url: String
+    ) {
+        fun toCharacterOrigin() = Character.CharacterOrigin(
+            name = name,
+            url = url
+        )
+    }
+
+    data class CharacterLocationRemote(
+        @SerializedName("name") val name: String,
+        @SerializedName("url") val url: String
+    ) {
+        fun toCharacterLocation() = Character.CharacterLocation(
+            name = name,
+            url = url
+        )
+    }
 }
 
-data class CharacterOriginRemote(
-    @SerializedName("name") val name: String,
-    @SerializedName("url") val url: String
-) {
-    fun toCharacterOrigin() = CharacterOrigin(
-        name = name,
-        url = url
-    )
-}
-
-data class CharacterLocationRemote(
-    @SerializedName("name") val name: String,
-    @SerializedName("url") val url: String
-) {
-    fun toCharacterLocation() = CharacterLocation(
-        name = name,
-        url = url
-    )
-}

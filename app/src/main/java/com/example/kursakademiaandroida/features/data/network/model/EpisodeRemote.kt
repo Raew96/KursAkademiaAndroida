@@ -7,7 +7,7 @@ import com.google.gson.annotations.SerializedName
 data class EpisodeRemote(
     @SerializedName("id") val id: Int,
     @SerializedName("air_date") val airDate: String,
-    @SerializedName("characters") val characters: List<Any>,
+    @SerializedName("characters") val characters: List<String>,
     @SerializedName("created") val created: String,
     @SerializedName("episode") val code: String,
     @SerializedName("name") val name: String,
