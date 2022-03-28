@@ -72,7 +72,8 @@ ext {
     //room dependencies
     def roomVersion = "2.4.1"
 
-    roomDependence =  "androidx.room:room-runtime:" + roomVersion
+    roomRuntimeDependence =  "androidx.room:room-runtime:" + roomVersion
+    roomKtxDependence =  "androidx.room:room-ktx:" + roomVersion
     kaptRoomDependence = "androidx.room:room-compiler:" + roomVersion
 
     //test dependencies

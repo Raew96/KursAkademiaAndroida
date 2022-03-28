@@ -64,7 +64,8 @@ dependencies {
     implementation networkDependencies.values()
 
     //room dependencies
-    implementation roomDependence
+    implementation roomKtxDependence
+    implementation roomRuntimeDependence
     kapt kaptRoomDependence
 
     //test dependencies

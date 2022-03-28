@@ -1,4 +1,4 @@
-package com.example.kursakademiaandroida.features.locations
+package com.example.kursakademiaandroida.features.locations.domain
 
 import com.example.kursakademiaandroida.features.locations.domain.model.Location
 

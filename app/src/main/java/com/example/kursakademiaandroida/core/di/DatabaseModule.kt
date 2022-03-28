@@ -1,7 +1,7 @@
 package com.example.kursakademiaandroida.core.di
 
 import androidx.room.Room
-import com.example.kursakademiaandroida.features.data.database.AppDatabase
+import com.example.kursakademiaandroida.core.database.AppDatabase
 import org.koin.android.ext.koin.androidContext
 import org.koin.dsl.module
 
@@ -14,5 +14,7 @@ val databaseModule = module {
             "database_name"
         ).build()
     }
+
+    single { get<AppDatabase>().episodeDao() }
 
 }
