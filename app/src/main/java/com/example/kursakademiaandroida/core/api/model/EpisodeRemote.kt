@@ -1,4 +1,4 @@
-package com.example.kursakademiaandroida.features.data.network.model
+package com.example.kursakademiaandroida.core.api.model
 
 import com.example.kursakademiaandroida.features.episodes.domain.model.Episode
 import com.google.gson.annotations.SerializedName
@@ -13,6 +13,8 @@ data class EpisodeRemote(
     @SerializedName("name") val name: String,
     @SerializedName("url") val url: String
 ) {
+    companion object
+
     fun toEpisode() = Episode(
         id = id,
         airDate = airDate,

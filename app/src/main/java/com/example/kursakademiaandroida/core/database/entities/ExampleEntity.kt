@@ -1,4 +1,4 @@
-package com.example.kursakademiaandroida.features.data.entities
+package com.example.kursakademiaandroida.core.database.entities
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

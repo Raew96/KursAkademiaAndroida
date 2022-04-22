@@ -10,7 +10,7 @@ abstract class UseCase<out Type, in Params> {
         params: Params,
         scope: CoroutineScope,
         executionDispatcher: CoroutineDispatcher = Dispatchers.IO,
-        onResult: (Result<Type>) -> Unit
+        onResult: (Result<Type>) -> Unit = {}
     ) {
         scope.launch {
             val result = withContext(executionDispatcher) {
@@ -21,4 +21,5 @@ abstract class UseCase<out Type, in Params> {
             onResult(result)
         }
     }
+
 }

@@ -1,6 +1,5 @@
 package com.example.kursakademiaandroida.features.characters.domain
 
-import com.example.kursakademiaandroida.features.characters.CharacterRepository
 import io.mockk.coVerify
 import io.mockk.mockk
 import kotlinx.coroutines.GlobalScope
@@ -17,7 +16,7 @@ internal class GetCharactersUseCaseTest {
         useCase(
             params = Unit,
             scope = GlobalScope,
-        ) {}
+        )
         //then
         coVerify { repository.getCharacters() }
     }

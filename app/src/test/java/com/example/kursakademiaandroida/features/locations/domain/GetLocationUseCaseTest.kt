@@ -1,6 +1,5 @@
 package com.example.kursakademiaandroida.features.locations.domain
 
-import com.example.kursakademiaandroida.features.locations.LocationRepository
 import io.mockk.coVerify
 import io.mockk.mockk
 import kotlinx.coroutines.GlobalScope
@@ -16,7 +15,7 @@ internal class GetLocationUseCaseTest {
         useCase(
             params = Unit,
             scope = GlobalScope,
-        ) {}
+        )
         //then
         coVerify { repository.getLocations() }
     }
